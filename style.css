@@ -1,3 +1,11 @@
-body{
-    background-image: url("/img/bk.jpg")
+*{
+    background-image: url("/img/bk.jpg");
+    padding: 5px;
+    margin: 5px;
+}
+
+header{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
 }
