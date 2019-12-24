@@ -1,4 +1,4 @@
-var Notes = function(note, userDate, id) {
+var Notes = function (note, userDate, id) {
   this.note = note;
   this.userDate = userDate;
   this.id = id;
@@ -25,6 +25,7 @@ function save() {
   }
 
   notes.push(todoNote);
+  id++;
   localStorage.setItem("todoList", JSON.stringify(notes));
   filList(note, todoDate);
   function filList(note, todoDate) {
@@ -33,7 +34,7 @@ function save() {
     let datenote = document.createTextNode(todoDate);
     node.appendChild(textnode);
     node.appendChild(datenote);
-    document.getElementById("fuck").appendChild(node);
+    document.getElementById("showList").appendChild(node);
     function createButton() {
       let new_button = document.createElement("button");
       new_button.classList.add(
@@ -50,10 +51,11 @@ function save() {
     new_button.addEventListener("click", complete);
     node.appendChild(new_button);
   }
-  // you must complete this ti delete the tasks
+  //delete the tasks
   function complete() {
-    let node = document.createElement("LI");
-    alert(this.textnode);
-    node.removeChild(node);
+    $(this)
+      .parent()
+      .remove()
+      .localStorage.removeItem();
   }
 }

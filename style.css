@@ -24,16 +24,6 @@ header {
   padding: 15px;
 }
 
-#myList {
-  background-image: url("img/note-stick.png");
-  width: 200px;
-  height: 250px;
-  text-align: left;
-  display: inline-block;
-  float: left;
-  overflow: auto;
-}
-
 li {
   width: 200px;
   position: relative;
